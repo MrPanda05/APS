@@ -108,6 +108,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -127,10 +129,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cliente.cpp" />
+    <ClCompile Include="DAOManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Reserva.cpp" />
+    <ClCompile Include="ReservaDAO.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Cliente.h" />
+    <ClInclude Include="DAOManager.h" />
+    <ClInclude Include="Reserva.h" />
+    <ClInclude Include="ReservaDAO.h" />
     <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

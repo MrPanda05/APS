@@ -27,9 +27,6 @@
     <ClCompile Include="Reserva.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DAOManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ReservaDAO.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -42,9 +39,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Reserva.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DAOManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ReservaDAO.h">

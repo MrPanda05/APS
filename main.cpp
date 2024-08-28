@@ -5,8 +5,28 @@
 #include "Cliente.h"
 #include "Reserva.h"
 #include "ReservaDAO.h"
-#include "DAOManager.h"
 
+std::string getInput() {
+	std::string input;
+	std::cout << "Digite: \n";
+	std::cin >> input;
+	return input;
+}
+void doStuff(std::string input, ReservaDAO* dao) {
+	if (input == "getReserva") {
+		std::string idInput;
+		idInput = getInput();
+		Reserva reserva = dao->getReserva(std::stoi(idInput));
+	}
+}
+void readInput(ReservaDAO* dao) {
+	std::string failSafe = "stop";
+	std::string input;
+	while (input != failSafe) {
+		input = getInput();
+		doStuff(input, dao);
+	}
+}
 
 int main() {
 	//Cliente* myCliente = new Cliente(34, "111222333444", "550044333", "Mario", "mario@gmail.com", "mandaguari", "ref");
@@ -17,9 +37,9 @@ int main() {
 	//Reserva reserva;
 	//reserva.setClienteAtual(&myCliente);
 	//reserva.printCliente();
-	/*DAOManager myDaoManager;
-	ReservaDAO reservaDao(&myDaoManager);
-	reservaDao.CriarReserva();*/
-
+	//DAOManager myDaoManager;
+	ReservaDAO reservaDao;
+	reservaDao.CriarReserva();
+	readInput(&reservaDao);
 	return 0;
 }

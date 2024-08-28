@@ -23,6 +23,7 @@ class Reserva
 		Cliente* _clienteAtual;
 
 	public:
+		Reserva(int id);
 		bool getStatus() { return _status; }
 		int getId() { return _id; }
 		int getPagantes() { return _pagantes; }

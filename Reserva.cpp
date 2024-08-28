@@ -1,6 +1,8 @@
 #include "Reserva.h"
 
-
+Reserva::Reserva(int id) {
+	_id = id;
+}
 void Reserva::setClienteAtual(Cliente* newCliente) {
 	_clienteAtual = newCliente;
 }

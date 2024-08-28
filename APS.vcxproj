@@ -130,7 +130,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Cliente.cpp" />
-    <ClCompile Include="DAOManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reserva.cpp" />
     <ClCompile Include="ReservaDAO.cpp" />
@@ -138,7 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Cliente.h" />
-    <ClInclude Include="DAOManager.h" />
     <ClInclude Include="Reserva.h" />
     <ClInclude Include="ReservaDAO.h" />
     <ClInclude Include="test.h" />

@@ -4,6 +4,8 @@
 #include <string>
 #include "Reserva.h"
 #include "Cliente.h"
+#include<cstdlib>
+
 class ReservaDAO
 {
 	private:
@@ -13,6 +15,7 @@ class ReservaDAO
 		void CriarReserva();
 		Reserva getReserva(int id);
 		Reserva getReservaByClientId(int clienteId);
+		void printTest();
 		~ReservaDAO();
 
 		

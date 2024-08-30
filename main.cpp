@@ -5,6 +5,8 @@
 #include "Cliente.h"
 #include "Reserva.h"
 #include "ReservaDAO.h"
+#include "DAOManager.h"
+#include "ReservaManager.h"
 
 std::string getInput() {
 	std::string input;
@@ -39,7 +41,10 @@ int main() {
 	//reserva.printCliente();
 	//DAOManager myDaoManager;
 	ReservaDAO reservaDao;
-	reservaDao.CriarReserva();
-	readInput(&reservaDao);
+	DAOManager daoManager;
+	ReservaManager reservaManager;
+	reservaManager.setDaoManager(&daoManager);
+	daoManager.setReservaDao(&reservaDao);
+	reservaManager.setReservaDao();
 	return 0;
 }

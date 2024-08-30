@@ -1,5 +1,6 @@
 #include "ReservaDAO.h"
 
+
 ReservaDAO::~ReservaDAO() {
 	for (std::vector<Reserva*>::iterator i = _myReservas.begin(); i != _myReservas.end(); ++i) {
 		delete* i;
@@ -7,8 +8,7 @@ ReservaDAO::~ReservaDAO() {
 	_myReservas.clear();
 }
 void ReservaDAO::CriarReserva() {
-	Reserva* newReserva = new Reserva(1);
-	_myReservas.push_back(newReserva);
+	_myReservas.push_back(new Reserva(rand()));
 	std::cout << "Reserva criada" << std::endl;
 }
 
@@ -31,4 +31,9 @@ Reserva ReservaDAO::getReservaByClientId(int clienteId) {
 			return *reserva;
 		}
 	}
+}
+
+
+void ReservaDAO::printTest() {
+	std::cout << "reserva dao";
 }

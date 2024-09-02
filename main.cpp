@@ -8,43 +8,51 @@
 #include "DAOManager.h"
 #include "ReservaManager.h"
 
-std::string getInput() {
-	std::string input;
-	std::cout << "Digite: \n";
-	std::cin >> input;
-	return input;
-}
-void doStuff(std::string input, ReservaDAO* dao) {
-	if (input == "getReserva") {
-		std::string idInput;
-		idInput = getInput();
-		Reserva reserva = dao->getReserva(std::stoi(idInput));
-	}
-}
-void readInput(ReservaDAO* dao) {
-	std::string failSafe = "stop";
-	std::string input;
-	while (input != failSafe) {
-		input = getInput();
-		doStuff(input, dao);
-	}
-}
+//std::string getInput() {
+//	std::string input;
+//	std::cout << "Digite: \n";
+//	std::cin >> input;
+//	return input;
+//}
+//void doStuff(std::string input, ReservaDAO* dao) {
+//	if (input == "cancelarReserva") {
+//		std::string idInput;
+//		idInput = getInput();
+//		//Reserva reserva = dao->getReserva(std::stoi(idInput));
+//	}
+//}
+//void readInput(ReservaDAO* dao) {
+//	std::string failSafe = "stop";
+//	std::string input;
+//	while (input != failSafe) {
+//		input = getInput();
+//		doStuff(input, dao);
+//	}
+//}
+
+//int x = 10;
+//int y = 34;
+//
+//std::vector<int*> test{ &x, &y };
+//
+//std::vector<int*> testVector() {
+//	return test;
+//}
 
 int main() {
-	//Cliente* myCliente = new Cliente(34, "111222333444", "550044333", "Mario", "mario@gmail.com", "mandaguari", "ref");
-	//Cliente* myCliente = new Cliente();
-	//std::cout << myCliente->getCidade();
-	//Cliente myCliente(34, "111222333444", "550044333", "Mario", "mario@gmail.com", "mandaguari", "ref");
-	//std::cout << myCliente.getCidade() << std::endl;
-	//Reserva reserva;
-	//reserva.setClienteAtual(&myCliente);
-	//reserva.printCliente();
-	//DAOManager myDaoManager;
-	ReservaDAO reservaDao;
 	DAOManager daoManager;
 	ReservaManager reservaManager;
-	reservaManager.setDaoManager(&daoManager);
+	ReservaDAO reservaDao;
 	daoManager.setReservaDao(&reservaDao);
-	reservaManager.setReservaDao();
+	reservaManager.setDaoManager(&daoManager);
+
+
+	//Caso de uso cancelar reserva da forma mais crua possivel
+	reservaDao.CriarReservaNoReturn();//1 ha uma instancia de reserva
+	Reserva* reserva = reservaManager.pesquisarReserva(41);// ache a reserva
+	reservaManager.cancelarReserva(reserva, "cliente baitola");//cancele a reserva
+
+
 	return 0;
+
 }

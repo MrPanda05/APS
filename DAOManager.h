@@ -2,15 +2,17 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Reserva.h"
-#include "Cliente.h"
 #include "ReservaDAO.h"
 class DAOManager
 {
 	private:
 		ReservaDAO* _reservaDao;
 	public:
-		void setReservaDao(ReservaDAO* reservaDao);
-		ReservaDAO* getReservaDao();
+		//gets
+		ReservaDAO* getReservaDao() { return _reservaDao; }
+		//sets
+		void setReservaDao(ReservaDAO* reservaDao) { _reservaDao = reservaDao; }
+
+		void seilaTest();
 };
 

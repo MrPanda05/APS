@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\DAOS">
+      <UniqueIdentifier>{2c65bed5-6e05-47b4-8cd7-1f0724ac941c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Managers">
+      <UniqueIdentifier>{46a5f426-7ed7-459b-9f91-2a3596275d43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DAOS">
+      <UniqueIdentifier>{50e4d847-c82c-45ed-9eab-423057087509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Managers">
+      <UniqueIdentifier>{a29e3ef7-6fcf-41eb-a12d-04846c911a66}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,13 +39,16 @@
     <ClCompile Include="Reserva.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ReservaDAO.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DAOManager.cpp">
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
     <ClCompile Include="ReservaManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Managers</Filter>
     </ClCompile>
-    <ClCompile Include="DAOManager.cpp">
+    <ClCompile Include="ReservaDAO.cpp">
+      <Filter>Source Files\DAOS</Filter>
+    </ClCompile>
+    <ClCompile Include="Caixa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +62,16 @@
     <ClInclude Include="Reserva.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ReservaDAO.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DAOManager.h">
+      <Filter>Header Files\Managers</Filter>
     </ClInclude>
     <ClInclude Include="ReservaManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Managers</Filter>
     </ClInclude>
-    <ClInclude Include="DAOManager.h">
+    <ClInclude Include="ReservaDAO.h">
+      <Filter>Header Files\DAOS</Filter>
+    </ClInclude>
+    <ClInclude Include="Caixa.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

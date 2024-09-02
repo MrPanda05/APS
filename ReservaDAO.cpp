@@ -7,33 +7,45 @@ ReservaDAO::~ReservaDAO() {
 	}
 	_myReservas.clear();
 }
-void ReservaDAO::CriarReserva() {
-	_myReservas.push_back(new Reserva(rand()));
+Reserva* ReservaDAO::CriarReserva() {
+	Reserva* newReserva = new Reserva(rand());
+	_myReservas.push_back(newReserva);
+	std::cout << "Reserva criada" << std::endl;
+	return newReserva;
+}
+
+void ReservaDAO::CriarReservaNoReturn()
+{
+	Reserva* newReserva = new Reserva(rand());
+	_myReservas.push_back(newReserva);
 	std::cout << "Reserva criada" << std::endl;
 }
 
-Reserva ReservaDAO::getReserva(int id) {
-	std::cout << "Procuurando" << std::endl;
+Reserva* ReservaDAO::recuperarReserva(int id) {
+	for (auto & element : _myReservas) {
+		if (element->getId() == id) {
+			return element;
+		}
+	}
+	return nullptr;
+}
 
-	for(Reserva* reserva : _myReservas)
-	{
-		if (reserva->getId() == id) {
-			std::cout << "Reserva achada" << std::endl;
-			return *reserva;
+bool ReservaDAO::atualizarReserva(Reserva* reserva) {
+	if (reserva == NULL) return false;
+	reserva->setStatus(!reserva->getStatus());
+	return true;
+}
+
+bool ReservaDAO::removerReserva(Reserva* reserva) {
+	if (reserva == NULL) return false;
+	for (auto& element : _myReservas) {
+		if (element->getId() == reserva->getId()) {
+			//todo: add remove element _myReserva.remove(element) or something
+			return true;
 		}
 	}
 }
 
-Reserva ReservaDAO::getReservaByClientId(int clienteId) {
-	for (Reserva* reserva : _myReservas)
-	{
-		if (reserva->getClienteAtual()->getId() == clienteId) {
-			return *reserva;
-		}
-	}
-}
-
-
-void ReservaDAO::printTest() {
-	std::cout << "reserva dao";
+std::vector<Reserva*> ReservaDAO::getReservas() {
+	return _myReservas;
 }

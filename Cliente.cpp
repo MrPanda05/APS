@@ -3,6 +3,12 @@
 #include <vector>
 #include <string>
 
+Cliente::Cliente(int id)
+{
+	_id = id;
+	std::cout << "cliente Instanciado vazio com id: " << id << std::endl;
+}
+
 Cliente::Cliente(int id, std::string cpf, std::string telefone, std::string nome, std::string email, std::string cidade, std::string referencia) {
 	_id = id;
 	_cpf = cpf;
@@ -11,5 +17,5 @@ Cliente::Cliente(int id, std::string cpf, std::string telefone, std::string nome
 	_email = email;
 	_cidade = cidade;
 	_referencia = referencia;
-	std::cout << "Cliente criado\n";
+	std::cout << "Cliente Instanciado especificado com id: " << id << std::endl;
 }

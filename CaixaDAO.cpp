@@ -6,9 +6,9 @@ CaixaDAO::~CaixaDAO()
 
 Caixa* CaixaDAO::CriarCaixa()
 {
-	//Unsafe code... too bad
 	std::time_t t = time(NULL);
-	struct std::tm date = *localtime(&t);
+	struct std::tm date;
+	localtime_s(&date, &t);
 	std::string ano = std::to_string((date.tm_year + 1900));
 	std::string mes = std::to_string((date.tm_mon + 1));
 	std::string dia = std::to_string((date.tm_mday));

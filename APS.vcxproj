@@ -130,6 +130,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Caixa.cpp" />
+    <ClCompile Include="CaixaDAO.cpp" />
+    <ClCompile Include="CaixaManager.cpp" />
     <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="DAOManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -140,6 +142,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Caixa.h" />
+    <ClInclude Include="CaixaDAO.h" />
+    <ClInclude Include="CaixaManager.h" />
     <ClInclude Include="Cliente.h" />
     <ClInclude Include="DAOManager.h" />
     <ClInclude Include="Reserva.h" />

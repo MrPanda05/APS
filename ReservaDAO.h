@@ -2,8 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cstdlib>
+#include <algorithm>
 #include "Reserva.h"
-#include<cstdlib>
 
 class ReservaDAO
 {

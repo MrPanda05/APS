@@ -40,10 +40,11 @@ bool ReservaDAO::removerReserva(Reserva* reserva) {
 	if (reserva == NULL) return false;
 	for (auto& element : _myReservas) {
 		if (element->getId() == reserva->getId()) {
-			//todo: add remove element _myReserva.remove(element) or something
+			//_myReservas.erase(std::remove(_myReservas.begin(), _myReservas.end(), element->getId()), _myReservas.end());
 			return true;
 		}
 	}
+	return false;
 }
 
 std::vector<Reserva*> ReservaDAO::getReservas() {

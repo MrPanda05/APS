@@ -51,6 +51,12 @@
     <ClCompile Include="Caixa.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CaixaDAO.cpp">
+      <Filter>Source Files\DAOS</Filter>
+    </ClCompile>
+    <ClCompile Include="CaixaManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h">
@@ -73,6 +79,12 @@
     </ClInclude>
     <ClInclude Include="Caixa.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CaixaDAO.h">
+      <Filter>Header Files\DAOS</Filter>
+    </ClInclude>
+    <ClInclude Include="CaixaManager.h">
+      <Filter>Header Files\Managers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

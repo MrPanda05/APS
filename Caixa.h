@@ -10,6 +10,7 @@ class Caixa
 
 	public:
 		Caixa();
+		Caixa(std::string data, std::string horarioAbertura);
 		//gets
 		std::string getData() { return _data; }
 		std::string getHorarioAbertura() { return _horarioAbertura; }

@@ -133,6 +133,8 @@
     <ClCompile Include="CaixaDAO.cpp" />
     <ClCompile Include="CaixaManager.cpp" />
     <ClCompile Include="Cliente.cpp" />
+    <ClCompile Include="ClienteDAO.cpp" />
+    <ClCompile Include="ClienteManager.cpp" />
     <ClCompile Include="DAOManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reserva.cpp" />
@@ -145,6 +147,8 @@
     <ClInclude Include="CaixaDAO.h" />
     <ClInclude Include="CaixaManager.h" />
     <ClInclude Include="Cliente.h" />
+    <ClInclude Include="ClienteDAO.h" />
+    <ClInclude Include="ClienteManager.h" />
     <ClInclude Include="DAOManager.h" />
     <ClInclude Include="Reserva.h" />
     <ClInclude Include="ReservaDAO.h" />

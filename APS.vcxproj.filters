@@ -57,6 +57,12 @@
     <ClCompile Include="CaixaManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="ClienteDAO.cpp">
+      <Filter>Source Files\DAOS</Filter>
+    </ClCompile>
+    <ClCompile Include="ClienteManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h">
@@ -84,6 +90,12 @@
       <Filter>Header Files\DAOS</Filter>
     </ClInclude>
     <ClInclude Include="CaixaManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="ClienteDAO.h">
+      <Filter>Header Files\DAOS</Filter>
+    </ClInclude>
+    <ClInclude Include="ClienteManager.h">
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
   </ItemGroup>

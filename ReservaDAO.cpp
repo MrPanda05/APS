@@ -32,7 +32,7 @@ Reserva* ReservaDAO::recuperarReserva(int id) {
 
 bool ReservaDAO::atualizarReserva(Reserva* reserva) {
 	if (reserva == NULL) return false;
-	reserva->setStatus(!reserva->getStatus());
+	reserva->setStatus(false);
 	return true;
 }
 

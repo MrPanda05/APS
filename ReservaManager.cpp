@@ -15,6 +15,7 @@
 
 Reserva* ReservaManager::pesquisarReserva(int idReserva)
 {
+
 	return _daoManager->getReservaDao()->recuperarReserva(idReserva);
 }
 
@@ -24,12 +25,12 @@ Reserva* ReservaManager::pesquisarReserva(std::string nomeCliente)
 	return nullptr;
 }
 
-bool ReservaManager::cancelarReserva(Reserva* reserva, std::string motivo)
+bool ReservaManager::cancelarReserva(int idReserva, std::string motivo)
 {
-	if (reserva == NULL) return false;//fail pre condition
-
-	reserva->setStatus(false);
-	std::cout << "Reserva de id: " << reserva->getId() << " devido a : " << motivo << std::endl;
+	//meio retardado isso
+	Reserva* temp = pesquisarReserva(idReserva);
+	temp->setStatus(false);
+	_daoManager->getReservaDao()->atualizarReserva(temp);
 	//change  vagas disponiveis
 	//change item pagamentos
 	return true;

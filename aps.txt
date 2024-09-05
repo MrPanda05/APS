@@ -19,6 +19,7 @@ Lancar item do produto
 CancelarReserva:* core
 -cancelarReserva->ReservaManager
 -pesquisarReserva
+mudar dc de cancelarReserva, nao faz muito sentido
 
 Realizar check-in da atividade:
 ??
@@ -33,7 +34,7 @@ Lançar custos do operacional*
 -lancarCusto(nomeCondutor, valorCondutor)
 -listarCategoriasCustoOperacional
 
-Exportar relatório de vendas por período*
+Exportar relatório de vendas por período
 -listarVendasPorPeriodo(dataInicial, dataFinal)-> venda manager
 -exportarRelatorio(formato)
 

@@ -11,6 +11,7 @@
 #include "Caixa.h"
 #include "CaixaDAO.h"
 #include "CaixaManager.h"
+#include "ClienteDAO.h"
 
 //std::string getInput() {
 //	std::string input;
@@ -45,20 +46,28 @@
 
 int main() {
 	DAOManager daoManager;
+
+	ReservaDAO reservaDao;
+	ReservaManager reservaManager;
+
 	CaixaDAO caixaDao;
 	CaixaManager caixaManager;
-	ReservaManager reservaManager;
-	ReservaDAO reservaDao;
+
+	ClienteDAO clienteDao;
+	ClienteManager clienteManager;
+
 	daoManager.setReservaDao(&reservaDao);
 	daoManager.setCaixaDao(&caixaDao);
 	reservaManager.setDaoManager(&daoManager);
+	reservaManager.setClienteManager(&clienteManager);
 	caixaManager.setDaoManager(&daoManager);
 
 
 	////Caso de uso cancelar reserva da forma mais crua possivel
-	//reservaDao.CriarReservaNoReturn();//1 ha uma instancia de reserva
-	//Reserva* reserva = reservaManager.pesquisarReserva(41);// ache a reserva
-	//reservaManager.cancelarReserva(reserva, "cliente baitola");//cancele a reserva
+	reservaDao.CriarReserva();//1 ha uma instancia de reserva
+	Reserva* reserva = reservaManager.pesquisarReserva(41);// ache a reserva
+	reservaManager.cancelarReserva(reserva->getId(), "cliente baitola");//cancele a reserva
+
 	
 	//Caso de uso fechar caixa de forma mais crua
 	//Caixa* newCaixa = caixaDao.CriarCaixa();

@@ -18,7 +18,7 @@ private:
 public:
 	//constructors
 	Cliente(int id);
-	Cliente(int id, std::string cpf, std::string telefone, std::string nome, std::string email, std::string cidade, std::string referencia);
+	Cliente(int id, std::string cpf, std::string telefone, std::string nome, std::string email, std::string cidade, std::string referencia, Reserva* reserva);
 	//gets
 	Reserva* getReserva() { return _reserva; }
 	int getId() { return _id; }

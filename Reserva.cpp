@@ -3,6 +3,7 @@
 //prefer this constructor
 Reserva::Reserva(int id) {
 	_id = id;
+	_status = true;
 	std::cout << "Instanciado reserva de id: " << id << std::endl;
 }
 

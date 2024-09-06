@@ -63,6 +63,15 @@
     <ClCompile Include="ClienteManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="ItemPagamento.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemPagamentoDAO.cpp">
+      <Filter>Source Files\DAOS</Filter>
+    </ClCompile>
+    <ClCompile Include="ItemPagamentoManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="test.h">
@@ -96,6 +105,18 @@
       <Filter>Header Files\DAOS</Filter>
     </ClInclude>
     <ClInclude Include="ClienteManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Pagamentos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemPagamento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemPagamentoDAO.h">
+      <Filter>Header Files\DAOS</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemPagamentoManager.h">
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
   </ItemGroup>

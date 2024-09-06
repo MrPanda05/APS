@@ -136,6 +136,9 @@
     <ClCompile Include="ClienteDAO.cpp" />
     <ClCompile Include="ClienteManager.cpp" />
     <ClCompile Include="DAOManager.cpp" />
+    <ClCompile Include="ItemPagamento.cpp" />
+    <ClCompile Include="ItemPagamentoDAO.cpp" />
+    <ClCompile Include="ItemPagamentoManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reserva.cpp" />
     <ClCompile Include="ReservaDAO.cpp" />
@@ -150,6 +153,10 @@
     <ClInclude Include="ClienteDAO.h" />
     <ClInclude Include="ClienteManager.h" />
     <ClInclude Include="DAOManager.h" />
+    <ClInclude Include="ItemPagamento.h" />
+    <ClInclude Include="ItemPagamentoDAO.h" />
+    <ClInclude Include="ItemPagamentoManager.h" />
+    <ClInclude Include="Pagamentos.h" />
     <ClInclude Include="Reserva.h" />
     <ClInclude Include="ReservaDAO.h" />
     <ClInclude Include="ReservaManager.h" />

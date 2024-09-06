@@ -2,13 +2,22 @@
 
 O projeto foi inicialmente criado usando o Microsoft visual studio, por isso esta uma bagunça
 
-# Como baixar
+O projeto foi feito principalmente usando o compilador da microsoft, mas ele pode ser usado rodando no GCC
 
-## Opção 1:
+# Como Rodar
 
-Baixe o repo, com o vscode, execute o main.cpp, use o gcc compiler
-ignore os files .sln e vcxproj
+## Opção 1
 
-## Opção 2:
+Com o vscode, abra o folder do projeto e rode o main.cpp, tenha certeza que as configurações do vscode estejam certa para rodar todos os
+arquivos .h e .cpp no mesmo folder.
 
-Baixe o repo, abrea com o Microsoft  visual studio, rode o codigo, use o compiler da microsoft
+Possivelmente no task.json em "args":["${workspaceFolder}/*.cpp, "${workspaceFolder}/*.h] adcione essas linhas, substitua por // se for windows
+
+
+## Opção 2 => Preferivel
+
+Com o microsoft visual comunity, clicar em "abrir projeto ou solucao" abrir o ASP.sln
+
+## Opção 3
+
+Com o microsoft visual comunity, clicar em abrir pasta local e localize o projeto

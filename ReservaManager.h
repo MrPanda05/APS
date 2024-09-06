@@ -4,15 +4,14 @@
 #include <string>
 #include "Reserva.h"
 #include "DAOManager.h"
+#include "ReservaDAO.h"
 #include "ClienteManager.h"
 
 class ReservaManager
 {
 	private:
-		DAOManager* _daoManager;
 		ClienteManager* _clienteManager;
 	public:
-		void setDaoManager(DAOManager* daoManager) { _daoManager = daoManager; }
 		void setClienteManager(ClienteManager* clienteManager) { _clienteManager = clienteManager; }
 		Reserva* pesquisarReserva(int idReserva);
 		Reserva* pesquisarReserva(std::string nomeCliente);

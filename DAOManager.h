@@ -4,18 +4,35 @@
 #include <string>
 #include "CaixaDAO.h"
 #include "ReservaDAO.h"
+#include "ClienteDAO.h"
+#include "ItemPagamentoDAO.h"
+
 class DAOManager
 {
 	private:
+		//constructors
+		DAOManager();
 		ReservaDAO* _reservaDao;
 		CaixaDAO* _caixaDao;
+		ClienteDAO* _clienteDao;
+		ItemPagamentoDAO* _itemPagamentoDao;
+
+		ReservaDAO* IgetReservaDao() { return _reservaDao; }
+		CaixaDAO* IgetCaixaDao() { return _caixaDao; }
+		ClienteDAO* IgetClienteDao() { return _clienteDao; }
+		ItemPagamentoDAO* IgetItemPagamentoDao() { return _itemPagamentoDao; }
+
+
 	public:
-		//gets
-		ReservaDAO* getReservaDao() { return _reservaDao; }
-		CaixaDAO* getCaixaDao() { return _caixaDao; }
-		//sets
-		void setReservaDao(ReservaDAO* reservaDao) { _reservaDao = reservaDao; }
-		void setCaixaDao(CaixaDAO* caixaDao) { _caixaDao = caixaDao; }
-		void seilaTest();
+		DAOManager(const DAOManager&) = delete;
+		~DAOManager();
+		static DAOManager& Get() {
+			static DAOManager Instance;
+			return Instance;
+		}
+		static ReservaDAO* getReservaDao() { return Get().IgetReservaDao(); }
+		static CaixaDAO* getCaixaDao() { return Get().IgetCaixaDao(); }
+		static ClienteDAO* getClienteDao() { return Get().IgetClienteDao(); }
+		static ItemPagamentoDAO* getItemPagamentoDao() { return Get().IgetItemPagamentoDao(); }
 };
 

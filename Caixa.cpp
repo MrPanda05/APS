@@ -11,3 +11,4 @@ Caixa::Caixa(std::string data, std::string horarioAbertura)
 	_horarioAbertura = horarioAbertura;
 	std::cout << "caixa criado" << std::endl;
 }
+

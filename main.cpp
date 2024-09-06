@@ -12,6 +12,9 @@
 #include "CaixaDAO.h"
 #include "CaixaManager.h"
 #include "ClienteDAO.h"
+#include "ItemPagamento.h"
+#include "ItemPagamentoManager.h"
+#include "ItemPagamentoDAO.h"
 
 //std::string getInput() {
 //	std::string input;
@@ -45,35 +48,37 @@
 //}
 
 int main() {
-	DAOManager daoManager;
-
-	ReservaDAO reservaDao;
 	ReservaManager reservaManager;
-
-	CaixaDAO caixaDao;
 	CaixaManager caixaManager;
-
-	ClienteDAO clienteDao;
 	ClienteManager clienteManager;
-
-	daoManager.setReservaDao(&reservaDao);
-	daoManager.setCaixaDao(&caixaDao);
-	reservaManager.setDaoManager(&daoManager);
-	reservaManager.setClienteManager(&clienteManager);
-	caixaManager.setDaoManager(&daoManager);
-
+	ItemPagamentoManager itemPagamentoManager;
 
 	////Caso de uso cancelar reserva da forma mais crua possivel
-	reservaDao.CriarReserva();//1 ha uma instancia de reserva
-	Reserva* reserva = reservaManager.pesquisarReserva(41);// ache a reserva
-	reservaManager.cancelarReserva(reserva->getId(), "cliente baitola");//cancele a reserva
+	//Pre conditions
+	int idReseva = DAOManager::getReservaDao()->CriarReserva()->getId();//Ha instancia de reserva
+	// Caso de uso em si
+	bool reservaCanel =  reservaManager.cancelarReserva(idReseva, "cliente rebolou errado pos cria");//cancele a reserva
+	//pos conditions
+	bool statusReserva = reservaManager.pesquisarReserva(idReseva)->getStatus();
+	std::cout << "status: " << statusReserva << std::endl;  //0 for cancel;
 
 	
 	//Caso de uso fechar caixa de forma mais crua
-	//Caixa* newCaixa = caixaDao.CriarCaixa();
-	//listarFormasPagamentoDia() -> implement this
-	//listarItensPagamento(formaPagamento) -> implement this
-	//caixaManager.fecharCaixa();
+	// pre conditions
+	Caixa* caixa = DAOManager::getCaixaDao()->CriarCaixa();//ha instancia de caixa
+	//Caso de uso em si
+	itemPagamentoManager.listarItensPagamento(Pagamentos::Pix);
+	itemPagamentoManager.listarFormasPagamentoDia();
+	caixaManager.fecharCaixa();
+	//Pos conditions
+	//caixa fechado
+
+	//caso de uso Lan�ar custos do operacional de forma crua
+
+	/*
+	LANCAR CUSTRO DO OPERACIONAL TO IMPLLEMENT
+	NAO DA TEMPO DE FAZER AGR, MANDAR DPS
+	*/
 
 	
 	return 0;

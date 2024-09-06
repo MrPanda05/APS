@@ -15,8 +15,8 @@
 
 Reserva* ReservaManager::pesquisarReserva(int idReserva)
 {
-
-	return _daoManager->getReservaDao()->recuperarReserva(idReserva);
+	//mudar pra usar o dvo pra checar se id eh real
+	return DAOManager::getReservaDao()->recuperarReserva(idReserva);
 }
 
 Reserva* ReservaManager::pesquisarReserva(std::string nomeCliente)
@@ -28,9 +28,11 @@ Reserva* ReservaManager::pesquisarReserva(std::string nomeCliente)
 bool ReservaManager::cancelarReserva(int idReserva, std::string motivo)
 {
 	//meio retardado isso
-	Reserva* temp = pesquisarReserva(idReserva);
-	temp->setStatus(false);
-	_daoManager->getReservaDao()->atualizarReserva(temp);
+	ReservaDAO* reservaDao = DAOManager::getReservaDao();
+	Reserva* reserva = reservaDao->recuperarReserva(idReserva);//2.retrive
+	reserva->setStatus(false);
+	reservaDao->atualizarReserva(reserva);
+
 	//change  vagas disponiveis
 	//change item pagamentos
 	return true;

@@ -4,28 +4,19 @@ CASO DE USO:
 -Contratos operacoes
 
 * do this
+#-most basic form done
+@-done for good
 
-core = parte mais basica e crua pronta
-done = tudo feito
 ============================
 Caso de uso:
 
-Enviar voucher:
--pesquisarReserva
-
-Lancar item do produto
--pesquisaReseva
-
-CancelarReserva:* core
--cancelarReserva->ReservaManager
--pesquisarReserva
+CancelarReserva:*#
+-cancelarReserva->ReservaManager#
+-pesquisarReserva#
 mudar dc de cancelarReserva, nao faz muito sentido
 
-Realizar check-in da atividade:
-??
-
-Fechar caixa*
--fecharCaixa
+Fechar caixa*#
+-fecharCaixa@
 -listarFormasPagamentoDia -> item pagamento manager
 -listarItensPagamento(formaPagamento)
 
@@ -33,10 +24,3 @@ Lançar custos do operacional*
 -inserirQuantidadeCondutores(quantidade)->??
 -lancarCusto(nomeCondutor, valorCondutor)
 -listarCategoriasCustoOperacional
-
-Exportar relatório de vendas por período
--listarVendasPorPeriodo(dataInicial, dataFinal)-> venda manager
--exportarRelatorio(formato)
-
-Realizar Reserva Brotas Rafting
--listarHorarios(data, atividade)

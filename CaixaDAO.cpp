@@ -7,8 +7,7 @@ CaixaDAO::~CaixaDAO()
 Caixa* CaixaDAO::CriarCaixa()
 {
 	std::time_t t = time(NULL);
-	struct std::tm date;
-	localtime_s(&date, &t);
+	struct std::tm date = *localtime(&t);
 	std::string ano = std::to_string((date.tm_year + 1900));
 	std::string mes = std::to_string((date.tm_mon + 1));
 	std::string dia = std::to_string((date.tm_mday));
@@ -32,6 +31,11 @@ Caixa* CaixaDAO::recuperarCaixa(std::string data)
 		}
 	}
 	return nullptr;
+}
+
+Caixa* CaixaDAO::recuperarCaixaAberto()
+{
+	return _myCaixas.back();
 }
 
 bool CaixaDAO::atualizarCaixa(Caixa* caixa, std::string dataFechamento)

@@ -6,6 +6,10 @@
 #include "DAOManager.h"
 #include "ReservaDAO.h"
 #include "ClienteManager.h"
+#include "ClienteDVO.h"
+#include "ReservaDVO.h"
+#include "DVOManager.h"
+
 
 class ReservaManager
 {
@@ -13,8 +17,7 @@ class ReservaManager
 		ClienteManager* _clienteManager;
 	public:
 		void setClienteManager(ClienteManager* clienteManager) { _clienteManager = clienteManager; }
-		Reserva* pesquisarReserva(int idReserva);
-		Reserva* pesquisarReserva(std::string nomeCliente);
+		Reserva* pesquisarReserva(int idReserva, std::string nomeCliente = "");
 		bool cancelarReserva(int idReserva, std::string motivo);
 		void listarReservasHorario(int horarios);
 		void listarPorId(int id);

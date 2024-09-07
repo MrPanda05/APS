@@ -10,9 +10,9 @@ CASO DE USO:
 ============================
 Caso de uso:
 
-CancelarReserva:*#
--cancelarReserva->ReservaManager#
--pesquisarReserva#
+CancelarReserva:*@
+-cancelarReserva->ReservaManager@
+-pesquisarReserva@
 mudar dc de cancelarReserva, nao faz muito sentido
 
 Fechar caixa*#

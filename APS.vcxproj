@@ -134,14 +134,17 @@
     <ClCompile Include="CaixaManager.cpp" />
     <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="ClienteDAO.cpp" />
+    <ClCompile Include="ClienteDVO.cpp" />
     <ClCompile Include="ClienteManager.cpp" />
     <ClCompile Include="DAOManager.cpp" />
+    <ClCompile Include="DVOManager.cpp" />
     <ClCompile Include="ItemPagamento.cpp" />
     <ClCompile Include="ItemPagamentoDAO.cpp" />
     <ClCompile Include="ItemPagamentoManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Reserva.cpp" />
     <ClCompile Include="ReservaDAO.cpp" />
+    <ClCompile Include="ReservaDVO.cpp" />
     <ClCompile Include="ReservaManager.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
@@ -151,14 +154,17 @@
     <ClInclude Include="CaixaManager.h" />
     <ClInclude Include="Cliente.h" />
     <ClInclude Include="ClienteDAO.h" />
+    <ClInclude Include="ClienteDVO.h" />
     <ClInclude Include="ClienteManager.h" />
     <ClInclude Include="DAOManager.h" />
+    <ClInclude Include="DVOManager.h" />
     <ClInclude Include="ItemPagamento.h" />
     <ClInclude Include="ItemPagamentoDAO.h" />
     <ClInclude Include="ItemPagamentoManager.h" />
     <ClInclude Include="Pagamentos.h" />
     <ClInclude Include="Reserva.h" />
     <ClInclude Include="ReservaDAO.h" />
+    <ClInclude Include="ReservaDVO.h" />
     <ClInclude Include="ReservaManager.h" />
     <ClInclude Include="test.h" />
   </ItemGroup>

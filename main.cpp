@@ -15,7 +15,9 @@
 #include "ItemPagamento.h"
 #include "ItemPagamentoManager.h"
 #include "ItemPagamentoDAO.h"
-
+#include "ClienteDVO.h"
+#include "ReservaDVO.h"
+#include "DVOManager.h"
 //std::string getInput() {
 //	std::string input;
 //	std::cout << "Digite: \n";
@@ -57,10 +59,10 @@ int main() {
 	//Pre conditions
 	int idReseva = DAOManager::getReservaDao()->CriarReserva()->getId();//Ha instancia de reserva
 	// Caso de uso em si
-	bool reservaCanel =  reservaManager.cancelarReserva(idReseva, "cliente rebolou errado pos cria");//cancele a reserva
+	bool reservaCanel =  reservaManager.cancelarReserva(reservaManager.pesquisarReserva(idReseva, "Mario")->getId(), "cliente morreu");//cancele a reserva
 	//pos conditions
 	bool statusReserva = reservaManager.pesquisarReserva(idReseva)->getStatus();
-	std::cout << "status: " << statusReserva << std::endl;  //0 for cancel;
+	//ReservaCancelada
 
 	
 	//Caso de uso fechar caixa de forma mais crua

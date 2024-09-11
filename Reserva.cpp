@@ -4,7 +4,6 @@
 Reserva::Reserva(int id) {
 	_id = id;
 	_status = true;
-	std::cout << "Instanciado reserva de id: " << id << std::endl;
 }
 
 Reserva::Reserva(int id, int pagantes, int cortesias, bool status, float valorPessoa, float valorTotal, float valorQuitado, float valorNaoQuitado, std::string dataReserva, std::string horarioReserva, std::string _dataAtividada, std::string horarioAtividade)
@@ -21,7 +20,6 @@ Reserva::Reserva(int id, int pagantes, int cortesias, bool status, float valorPe
 	_horarioReserva = horarioReserva;
 	_dataAtividada = _dataAtividada;
 	_horarioAtividade = horarioAtividade;
-	std::cout << "Instanciado reserva full com id: " << id << std::endl;
 
 }
 

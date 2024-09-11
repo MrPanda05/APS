@@ -10,7 +10,6 @@ ReservaDAO::~ReservaDAO() {
 Reserva* ReservaDAO::CriarReserva() {
 	Reserva* newReserva = new Reserva(rand() % 32767);
 	_myReservas.push_back(newReserva);
-	std::cout << "Reserva criada" << std::endl;
 	return newReserva;
 }
 
@@ -18,7 +17,6 @@ void ReservaDAO::CriarReservaNoReturn()
 {
 	Reserva* newReserva = new Reserva(rand() % 32767);
 	_myReservas.push_back(newReserva);
-	std::cout << "Reserva criada" << std::endl;
 }
 
 Reserva* ReservaDAO::recuperarReserva(int id) {

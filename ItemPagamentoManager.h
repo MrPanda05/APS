@@ -4,6 +4,8 @@
 #include <string>
 #include "ItemPagamento.h"
 #include "Pagamentos.h"
+#include "ItemPagamentoDAO.h"
+#include "DAOManager.h"
 
 class ItemPagamentoManager
 {

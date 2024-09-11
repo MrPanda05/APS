@@ -17,8 +17,8 @@ mudar dc de cancelarReserva, nao faz muito sentido
 
 Fechar caixa*#
 -fecharCaixa@
--listarFormasPagamentoDia -> item pagamento manager
--listarItensPagamento(formaPagamento)
+-listarFormasPagamentoDia@
+-listarItensPagamento(formaPagamento)-> tem que adcionar esse no dc
 
 Lançar custos do operacional*
 -inserirQuantidadeCondutores(quantidade)->??

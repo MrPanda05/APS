@@ -16,10 +16,8 @@ Caixa* CaixaDAO::CriarCaixa()
 	std::string sec = std::to_string((date.tm_sec));
 	std::string horaAbertura = hora + ":" + min + ":" + sec;
 	std::string dataCompleta = dia + "/" + mes + "/" + ano;
-	std::cout << "criado na data: " << dataCompleta << " as " << horaAbertura << std::endl;
 	Caixa* newCaixa = new Caixa(dataCompleta, horaAbertura);
 	_myCaixas.push_back(newCaixa);
-	std::cout << "Caixa DAO Criado criada" << std::endl;
 	return newCaixa;
 }
 

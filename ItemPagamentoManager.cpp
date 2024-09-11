@@ -2,11 +2,16 @@
 
 bool ItemPagamentoManager::listarItensPagamento(Pagamentos pagamento)
 {
-	std::cout << "foi listado pagamentos pelo metodo: " << pagamento << std::endl;
+	ItemPagamentoDAO* dao = DAOManager::getItemPagamentoDao();
+	ItemPagamento* itemPagamento = dao->recuperarItemPagamento();
+	std::string dia = dao->now();
 	return true;
 }
 
 void ItemPagamentoManager::listarFormasPagamentoDia()
 {
-	std::cout << "foram vendidos 22 bilhao de items" << std::endl;
+	ItemPagamentoDAO* dao = DAOManager::getItemPagamentoDao();
+	ItemPagamento* itemPagamento = dao->recuperarItemPagamento();
+	std::string dia = dao->now();
+	dao->listar(dia, itemPagamento);
 }

@@ -1,18 +1,4 @@
 #include "ReservaManager.h"
-
-//for (auto& element : _reservaDao->getReservas()) {
-//	std::cout << element->getId() << std::endl;
-//}
-//Reserva ReservaManager::pesquisarReserva(int reservaId, std::string nomeClient) {
-//
-//}
-//Reserva ReservaManager::pesquisarReserva(int reservaId) {
-//
-//}
-//Reserva ReservaManager::pesquisarReserva(std::string nomeClient) {
-//
-//}
-
 Reserva* ReservaManager::pesquisarReserva(int idReserva, std::string nomeCliente)
 {
 	ClienteDVO* clienteDvo = DVOManager::getClienteDvo();//1

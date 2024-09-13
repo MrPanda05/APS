@@ -9,6 +9,7 @@
 #include "ClienteDVO.h"
 #include "ReservaDVO.h"
 #include "DVOManager.h"
+#include "ClienteDAO.h"
 
 
 class ReservaManager
@@ -17,9 +18,9 @@ class ReservaManager
 		ClienteManager* _clienteManager;
 	public:
 		void setClienteManager(ClienteManager* clienteManager) { _clienteManager = clienteManager; }
-		Reserva* pesquisarReserva(int idReserva, std::string nomeCliente = "");
+		std::vector<Reserva *> pesquisarReserva(int idReserva, std::string nomeCliente);
 		bool cancelarReserva(int idReserva, std::string motivo);
-		void listarReservasHorario(int horarios);
+		std::vector<Reserva*> listarReservasHorario(std::string horarios);
 		void listarPorId(int id);
 
 };

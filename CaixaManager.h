@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <ctime>
 #include "DAOManager.h"
 #include "CaixaDAO.h"
 class CaixaManager

@@ -18,17 +18,25 @@
 #include "ClienteDVO.h"
 #include "ReservaDVO.h"
 #include "DVOManager.h"
+#include "Checkin.h"
+#include "CheckinDAO.h"
+#include "CheckinManager.h"
+#include "Pulseira.h"
+#include "PulseiraDao.h"
+#include "PulseiraManager.h"
 
 int main() {
 	ReservaManager reservaManager;
 	CaixaManager caixaManager;
 	ClienteManager clienteManager;
 	ItemPagamentoManager itemPagamentoManager;
+	CheckinManager checkinManager;
+	PulseiraManager pulseiraManager;
 
 	////Caso de uso cancelar reserva
-	int idReseva = DAOManager::getReservaDao()->CriarReserva()->getId();//Ha instancia de reserva
-	bool reservaCanel =  reservaManager.cancelarReserva(reservaManager.pesquisarReserva(idReseva, "Mario")->getId(), "cliente morreu");//cancele a reserva
-	bool statusReserva = reservaManager.pesquisarReserva(idReseva)->getStatus();
+	int idReseva = DAOManager::getReservaDao()->criar()->getId();//Ha instancia de reserva
+	Reserva* reserva = reservaManager.pesquisarReserva(idReseva, "mario").at(0);
+	bool reservaCanel =  reservaManager.cancelarReserva(reserva->getId(), "cliente morreu");//cancele a reserva
 
 	
 	//Caso de uso fechar caixa
@@ -38,11 +46,13 @@ int main() {
 	caixaManager.fecharCaixa();
 
 
-	//caso de uso Lan�ar custos do operacional
-	/*
-	LANCAR CUSTRO DO OPERACIONAL TO IMPLLEMENT
-	NAO DA TEMPO DE FAZER AGR, MANDAR DPS
-	*/
+	//caso de check in
+	reservaManager.listarReservasHorario("2/3/2024");
+	Checkin* checkin = DAOManager::getCheckinDao()->criar();
+	checkin->setReserva(reservaManager.pesquisarReserva(idReseva, "mario").at(0));
+	checkinManager.inserirNumeroPresentes(idReseva, 69);
+	pulseiraManager.listarNumeracaoPulseiras();
+
 	return 0;
 
 }

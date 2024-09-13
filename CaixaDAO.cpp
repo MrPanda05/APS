@@ -2,6 +2,10 @@
 
 CaixaDAO::~CaixaDAO()
 {
+	for (std::vector<Caixa*>::iterator i = _myCaixas.begin(); i != _myCaixas.end(); ++i) {
+		delete* i;
+	}
+	_myCaixas.clear();
 }
 
 Caixa* CaixaDAO::CriarCaixa()
@@ -21,29 +25,23 @@ Caixa* CaixaDAO::CriarCaixa()
 	return newCaixa;
 }
 
-Caixa* CaixaDAO::recuperarCaixa(std::string data)
-{
-	for (auto& element : _myCaixas) {
-		if (element->getData() == data) {
-			return element;
-		}
-	}
-	return nullptr;
-}
 
 Caixa* CaixaDAO::recuperarCaixaAberto()
 {
 	return _myCaixas.back();
 }
 
-bool CaixaDAO::atualizarCaixa(Caixa* caixa, std::string dataFechamento)
+bool CaixaDAO::atualizar(Caixa* caixa)
 {
 	if (caixa == NULL) return false;
-	caixa->setHorarioFechamento(dataFechamento);
+	std::time_t t = time(NULL);
+	struct std::tm date = *localtime(&t);
+	std::string dia = std::to_string((date.tm_mday));
+	caixa->setHorarioFechamento(dia);
 	return true;
 }
 
-bool CaixaDAO::removerCaixa(Caixa* caixa)
+bool CaixaDAO::remover(Caixa* caixa)
 {
 	if (caixa == NULL) return false;
 	for (auto& element : _myCaixas) {
@@ -53,9 +51,4 @@ bool CaixaDAO::removerCaixa(Caixa* caixa)
 		}
 	}
 	return false;
-}
-
-std::vector<Caixa*> CaixaDAO::getCaixas()
-{
-	return _myCaixas;
 }

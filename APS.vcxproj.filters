@@ -39,9 +39,6 @@
     <ClCompile Include="Cliente.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Reserva.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -87,11 +84,26 @@
     <ClCompile Include="DVOManager.cpp">
       <Filter>Source Files\Managers</Filter>
     </ClCompile>
+    <ClCompile Include="Checkin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckinDAO.cpp">
+      <Filter>Source Files\DAOS</Filter>
+    </ClCompile>
+    <ClCompile Include="CheckinManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="Pulseira.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PulseiraDao.cpp">
+      <Filter>Source Files\DAOS</Filter>
+    </ClCompile>
+    <ClCompile Include="PulseiraManager.cpp">
+      <Filter>Source Files\Managers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="test.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Cliente.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -141,6 +153,24 @@
       <Filter>Header Files\DVOS</Filter>
     </ClInclude>
     <ClInclude Include="DVOManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Checkin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckinDAO.h">
+      <Filter>Header Files\DAOS</Filter>
+    </ClInclude>
+    <ClInclude Include="CheckinManager.h">
+      <Filter>Header Files\Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="Pulseira.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PulseiraDao.h">
+      <Filter>Header Files\DAOS</Filter>
+    </ClInclude>
+    <ClInclude Include="PulseiraManager.h">
       <Filter>Header Files\Managers</Filter>
     </ClInclude>
   </ItemGroup>

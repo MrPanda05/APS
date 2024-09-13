@@ -20,7 +20,4 @@ Fechar caixa*#
 -listarFormasPagamentoDia@
 -listarItensPagamento(formaPagamento)-> tem que adcionar esse no dc
 
-Lançar custos do operacional*
--inserirQuantidadeCondutores(quantidade)->??
--lancarCusto(nomeCondutor, valorCondutor)
--listarCategoriasCustoOperacional
+Realizar check in

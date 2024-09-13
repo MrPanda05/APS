@@ -6,6 +6,8 @@ DAOManager::DAOManager()
 	_caixaDao = new CaixaDAO();
 	_clienteDao = new ClienteDAO();
 	_itemPagamentoDao = new ItemPagamentoDAO();
+	_checkinDao = new CheckinDAO();
+	_pulseiraDao = new PulseiraDao();
 }
 
 DAOManager::~DAOManager()
@@ -14,5 +16,7 @@ DAOManager::~DAOManager()
 	delete _caixaDao;
 	delete _clienteDao;
 	delete _itemPagamentoDao;
+	delete _checkinDao;
+	delete _pulseiraDao;
 }
 

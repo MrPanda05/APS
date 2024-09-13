@@ -132,6 +132,9 @@
     <ClCompile Include="Caixa.cpp" />
     <ClCompile Include="CaixaDAO.cpp" />
     <ClCompile Include="CaixaManager.cpp" />
+    <ClCompile Include="Checkin.cpp" />
+    <ClCompile Include="CheckinDAO.cpp" />
+    <ClCompile Include="CheckinManager.cpp" />
     <ClCompile Include="Cliente.cpp" />
     <ClCompile Include="ClienteDAO.cpp" />
     <ClCompile Include="ClienteDVO.cpp" />
@@ -142,16 +145,21 @@
     <ClCompile Include="ItemPagamentoDAO.cpp" />
     <ClCompile Include="ItemPagamentoManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Pulseira.cpp" />
+    <ClCompile Include="PulseiraDao.cpp" />
+    <ClCompile Include="PulseiraManager.cpp" />
     <ClCompile Include="Reserva.cpp" />
     <ClCompile Include="ReservaDAO.cpp" />
     <ClCompile Include="ReservaDVO.cpp" />
     <ClCompile Include="ReservaManager.cpp" />
-    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Caixa.h" />
     <ClInclude Include="CaixaDAO.h" />
     <ClInclude Include="CaixaManager.h" />
+    <ClInclude Include="Checkin.h" />
+    <ClInclude Include="CheckinDAO.h" />
+    <ClInclude Include="CheckinManager.h" />
     <ClInclude Include="Cliente.h" />
     <ClInclude Include="ClienteDAO.h" />
     <ClInclude Include="ClienteDVO.h" />
@@ -162,11 +170,13 @@
     <ClInclude Include="ItemPagamentoDAO.h" />
     <ClInclude Include="ItemPagamentoManager.h" />
     <ClInclude Include="Pagamentos.h" />
+    <ClInclude Include="Pulseira.h" />
+    <ClInclude Include="PulseiraDao.h" />
+    <ClInclude Include="PulseiraManager.h" />
     <ClInclude Include="Reserva.h" />
     <ClInclude Include="ReservaDAO.h" />
     <ClInclude Include="ReservaDVO.h" />
     <ClInclude Include="ReservaManager.h" />
-    <ClInclude Include="test.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,6 +18,7 @@ class Reserva
 		std::string _horarioReserva;
 		std::string _dataAtividada;
 		std::string _horarioAtividade;
+		std::string _motivo;
 	public:
 		//constructors
 		Reserva(int id);
@@ -35,6 +36,7 @@ class Reserva
 		std::string getHorarioReserva() { return _horarioReserva; }
 		std::string getDataAtivada() { return _dataAtividada; }
 		std::string getHorarioAtividade() { return _horarioAtividade; }
+		std::string getMotivo() { return _motivo; }
 		//sets
 		void setStatus(bool newStatus) { _status = newStatus; }
 		void setId(int id) { _id = id; }
@@ -48,6 +50,7 @@ class Reserva
 		void setHorarioReserva(std::string horarioReserva) { _horarioReserva = horarioReserva; }
 		void setDataAtividade(std::string dataAtividade) { _dataAtividada = dataAtividade; }
 		void setHorarioAtividade(std::string horarioAtividade) { _horarioAtividade = horarioAtividade; }
+		void setMotivo(std::string motivo) { _motivo = motivo; }
 
 };
 

@@ -2,46 +2,42 @@
 
 ItemPagamentoDAO::~ItemPagamentoDAO()
 {
-
+	for (std::vector<ItemPagamento*>::iterator i = _myitemPagamentos.begin(); i != _myitemPagamentos.end(); ++i) {
+		delete* i;
+	}
+	_myitemPagamentos.clear();
 }
 
-ItemPagamento* ItemPagamentoDAO::criarItemPagamento()
+ItemPagamento* ItemPagamentoDAO::criar()
 {
 	ItemPagamento* itemPagamento = new ItemPagamento();
 	_myitemPagamentos.push_back(itemPagamento);
 	return itemPagamento;
 }
 
-ItemPagamento* ItemPagamentoDAO::recuperarItemPagamento()
+ItemPagamento* ItemPagamentoDAO::recuperar()
 {
 	return nullptr;
 }
 
-bool ItemPagamentoDAO::atualizarItemPagamento(ItemPagamento* itemPagamento)
+bool ItemPagamentoDAO::atualizar(ItemPagamento* itemPagamento)
 {
 	return false;
 }
 
-bool ItemPagamentoDAO::removerItemPagamento(ItemPagamento* itemPagamento)
+bool ItemPagamentoDAO::remover(ItemPagamento* itemPagamento)
 {
 	return false;
 }
 
-void ItemPagamentoDAO::listar(std::string dia, ItemPagamento* itemPagamento)
+std::vector<ItemPagamento*> ItemPagamentoDAO::listar(std::string dia, ItemPagamento* itemPagamento)
 {
+	std::vector<ItemPagamento*> itemPagamentos;
 	for (auto& element : _myitemPagamentos) {
 		if (element->getData() != dia) continue;
-		std::cout << element->getPagamentoAtual();
+		itemPagamentos.push_back(element);
 	}
-}
-
-void ItemPagamentoDAO::listar(std::string dia, Pagamentos pagamentos)
-{
-	for (auto& element : _myitemPagamentos) {
-		if (element->getPagamentoAtual() == pagamentos) {
-			std::cout << element->getValor();
-		}
-	}
+	return itemPagamentos;
 }
 
 std::string ItemPagamentoDAO::now()

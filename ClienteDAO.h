@@ -14,11 +14,10 @@ private:
 public:
 	~ClienteDAO();
 	//crud
-	Cliente* CriarCliente();
-	void CriarClienteNoReturn();
-	Cliente* recuperarCliente(int id);
-	bool atualizarReserva(Cliente* cliente);
-	bool removerReserva(Cliente* cliente);
-	std::vector<Cliente*> getClientes();
+	Cliente* criar();
+	Cliente* recuperar(int id);
+	bool atualizar(Cliente* cliente);
+	bool remover(Cliente* cliente);
+	std::vector<Cliente*> listar(std::string nome);
 };
 

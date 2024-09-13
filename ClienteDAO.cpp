@@ -2,33 +2,47 @@
 
 ClienteDAO::~ClienteDAO()
 {
+	for (std::vector<Cliente*>::iterator i = _myClientes.begin(); i != _myClientes.end(); ++i) {
+		delete* i;
+	}
+	_myClientes.clear();
 }
 
-Cliente* ClienteDAO::CriarCliente()
+Cliente* ClienteDAO::criar()
 {
+	Cliente* newReserva = new Cliente(rand() % 32767);
+	_myClientes.push_back(newReserva);
+	return newReserva;
+}
+
+Cliente* ClienteDAO::recuperar(int id)
+{
+	for (auto& element : _myClientes) {
+		if (element->getId() == id) {
+			return element;
+		}
+	}
 	return nullptr;
 }
 
-void ClienteDAO::CriarClienteNoReturn()
-{
-}
-
-Cliente* ClienteDAO::recuperarCliente(int id)
-{
-	return nullptr;
-}
-
-bool ClienteDAO::atualizarReserva(Cliente* cliente)
+bool ClienteDAO::atualizar(Cliente* cliente)
 {
 	return false;
 }
 
-bool ClienteDAO::removerReserva(Cliente* cliente)
+bool ClienteDAO::remover(Cliente* cliente)
 {
 	return false;
 }
 
-std::vector<Cliente*> ClienteDAO::getClientes()
+std::vector<Cliente*> ClienteDAO::listar(std::string nome)
 {
-	return std::vector<Cliente*>();
+	std::vector<Cliente*> clientes;
+	for (auto& element : _myClientes) {
+		if (element->getNome() == nome) {
+			clientes.push_back(element);
+		}
+	}
+	return clientes;
 }
+

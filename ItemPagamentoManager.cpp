@@ -3,7 +3,7 @@
 bool ItemPagamentoManager::listarItensPagamento(Pagamentos pagamento)
 {
 	ItemPagamentoDAO* dao = DAOManager::getItemPagamentoDao();
-	ItemPagamento* itemPagamento = dao->recuperarItemPagamento();
+	ItemPagamento* itemPagamento = dao->recuperar();
 	std::string dia = dao->now();
 	return true;
 }
@@ -11,7 +11,7 @@ bool ItemPagamentoManager::listarItensPagamento(Pagamentos pagamento)
 void ItemPagamentoManager::listarFormasPagamentoDia()
 {
 	ItemPagamentoDAO* dao = DAOManager::getItemPagamentoDao();
-	ItemPagamento* itemPagamento = dao->recuperarItemPagamento();
+	ItemPagamento* itemPagamento = dao->recuperar();
 	std::string dia = dao->now();
 	dao->listar(dia, itemPagamento);
 }
